@@ -54,9 +54,11 @@ const [height, setHeight] = useState(0);
  const buscarTecnologias =() => {
    console.log("Inicio..."+Date.now());
         setTecnologias(+Date.now())
-        return toast.success("Inicio de carga previa de tecnologias...",{
-         position: "top-left"});
-        };
+        return toast.success("Inicio de carga previa de tecnologias...", {
+      position: toast.POSITION.TOP_LEFT,
+      className: 'Label--info'
+ });
+ };
 
     useEffect(() => {
     const timer = setTimeout(() => {
