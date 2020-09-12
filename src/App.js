@@ -2,7 +2,7 @@
 import React,{useEffect, useRef, useState} from "react";
 import styled from 'styled-components';
 import "react-toastify/dist/ReactToastify.css";
-import { toast } from "react-toastify";
+import { ToastContainer,toast } from "react-toastify";
 import "./style.css";
 toast.configure();
 ///
@@ -76,7 +76,8 @@ const [height, setHeight] = useState(0);
       
           Seleccione el Modulo además del Grupo ó Tecnología</p>
            <Ul height={height} ref={content}>
-      {list.map((item, index)=> <li key={index}>{item}</li>)}
+      {list.map((item, index)=> <li key={index}>{item} <ToastContainer /></li>)}
+
 </Ul>
   </div>
   </React.Fragment>
